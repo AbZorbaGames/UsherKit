@@ -1,0 +1,8 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'UsherKit_Tests' do
+  pod 'UsherKit', :path => '../'
+  
+  
+end

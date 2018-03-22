@@ -1,0 +1,22 @@
+{
+  "name": "UsherKit",
+  "version": "0.1.0",
+  "summary": "A short description of UsherKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/averello/UsherKit",
+  "license": {
+    "type": "Apache",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Georges Boumis": "developer.george.boumis@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/averello/UsherKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "UsherKit/Classes/**/*"
+}

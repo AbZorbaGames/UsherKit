@@ -1,0 +1,6 @@
+framework module UsherKit {
+  umbrella header "UsherKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
