@@ -56,9 +56,9 @@ public extension UsherSize {
 
 public protocol UsherRect {
     var layoutOrigin: UsherPoint { get set }
-    var UsherSize: UsherSize { get set }
+    var layoutSize: UsherSize { get set }
     
-    init(layoutOrigin: UsherPoint, UsherSize: UsherSize)
+    init(layoutOrigin: UsherPoint, layoutSize: UsherSize)
     
     static var zero: UsherRect { get }
 }
@@ -66,14 +66,14 @@ public protocol UsherRect {
 public extension UsherRect {
     
     var layoutWidth: Float {
-        get { return self.UsherSize.layoutWidth }
-        set { self.UsherSize.layoutWidth = newValue }
+        get { return self.layoutSize.layoutWidth }
+        set { self.layoutSize.layoutWidth = newValue }
     }
     var layoutHeight: Float {
-        get { return self.UsherSize.layoutHeight }
-        set { self.UsherSize.layoutHeight = newValue }
+        get { return self.layoutSize.layoutHeight }
+        set { self.layoutSize.layoutHeight = newValue }
     }
     
     static var zero: UsherRect { return URect(layoutOrigin: UPoint.zero,
-                                              UsherSize: USize.zero) }
+                                              layoutSize: USize.zero) }
 }

@@ -47,10 +47,10 @@ internal struct USize: UsherSize {
 
 internal struct URect: UsherRect {
     var layoutOrigin: UsherPoint
-    var UsherSize: UsherSize
+    var layoutSize: UsherSize
     
-    init(layoutOrigin: UsherPoint, UsherSize: UsherSize) {
+    init(layoutOrigin: UsherPoint, layoutSize: UsherSize) {
         self.layoutOrigin = layoutOrigin
-        self.UsherSize = UsherSize
+        self.layoutSize = layoutSize
     }
 }
