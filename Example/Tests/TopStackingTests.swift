@@ -61,7 +61,7 @@ class TopStackingTests: XCTestCase {
             CGSize(width: 20, height: 30),
             CGSize(width: 10, height: 20),
             ]
-        let results = [
+        let expectedResults = [
             CGRect(x: 0, y: CGFloat(insets.top), width: sizes[0].width, height: sizes[0].height),
             CGRect(x: 0, y: CGFloat(insets.top) + CGFloat(verticalSpacing) + sizes[0].height, width: sizes[1].width, height: sizes[1].height),
             CGRect(x: 0, y: CGFloat(insets.top) + CGFloat(verticalSpacing * 2) + sizes[0].height + sizes[1].height, width: sizes[2].width, height: sizes[2].height),
@@ -72,9 +72,12 @@ class TopStackingTests: XCTestCase {
         let layout = TopStackingLayout(verticalSpacing: verticalSpacing,
                                         insets: insets)
         do {
-            let rects = try layout.positioning(ofSizes: sizes, inBounds: bounds)
-            XCTAssert(rects.count == sizes.count)
-            XCTAssert(rects == results)
+            let inRects = sizes.map { (size: CGSize) -> CGRect in
+                return CGRect(origin: CGPoint.zero, size: size)
+            }
+            let outRects = try layout.positioning(ofRects: inRects, inBounds: bounds)
+            XCTAssert(outRects.count == inRects.count)
+            XCTAssert(outRects == expectedResults)
         } catch {
             XCTFail()
         }
@@ -95,7 +98,10 @@ class TopStackingTests: XCTestCase {
         let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 200, height: 50))
         let layout = TopStackingLayout(verticalSpacing: verticalSpacing,
                                         insets: insets)
-        XCTAssertThrowsError(try layout.positioning(ofSizes: sizes, inBounds: bounds))
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
+        XCTAssertThrowsError(try layout.positioning(ofRects: inRects, inBounds: bounds))
     }
     
     func testEmptyPositioning() {
@@ -108,6 +114,9 @@ class TopStackingTests: XCTestCase {
         let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 200, height: 50))
         let layout = TopStackingLayout(verticalSpacing: verticalSpacing,
                                         insets: insets)
-        XCTAssertThrowsError(try layout.positioning(ofSizes: sizes, inBounds: bounds))
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
+        XCTAssertThrowsError(try layout.positioning(ofRects: inRects, inBounds: bounds))
     }
 }

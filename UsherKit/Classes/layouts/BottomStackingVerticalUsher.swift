@@ -29,31 +29,36 @@ public protocol BottomStackingVerticalUsher: VerticalUsher {}
 
 public extension BottomStackingVerticalUsher {
     
-    func positioning<Rect, Size>(ofSizes sizes: [Size], inBounds bounds: Rect) throws -> [Rect]
-        where Rect: UsherRect, Size: UsherSize {
-            guard sizes.isEmpty == false else { throw UsherError.noInput }
+    func positioning<Rect>(ofRects rects: [Rect], inBounds bounds: Rect) throws -> [Rect]
+        where Rect: UsherRect {
             
-            let size = self.requiredSizeForPositioning(sizes: sizes)
+            guard rects.isEmpty == false else { throw UsherError.noInput }
             
-            print("asking to layout sizes: \(size) in bounds: \(bounds) requiredSize: \(size)")
-            guard bounds.layoutWidth >= size.layoutWidth,
-                bounds.layoutHeight >= size.layoutHeight else { throw UsherError.cannotFit }
+            let sizes = rects.map({ (rect: UsherRect) -> USize in
+                let size = rect.layoutSize
+                return USize(layoutWidth: size.layoutWidth, layoutHeight: size.layoutHeight)
+            })
+            
+            let requiredSize = self.requiredSizeForPositioning(sizes: sizes)
+            
+            print("asking to layout sizes: \(requiredSize) in bounds: \(bounds) requiredSize: \(requiredSize)")
+            guard bounds.layoutWidth >= requiredSize.layoutWidth,
+                bounds.layoutHeight >= requiredSize.layoutHeight else { throw UsherError.cannotFit }
             
             var positions: [Rect] = []
-            var previous = Rect(layoutOrigin: UPoint.zero,
-                                layoutSize: sizes.last!)
+            var previous = rects.last!
             let y = (bounds.layoutHeight - self.insets.bottom) - previous.layoutHeight
             previous.layoutOrigin.layoutY = y
             positions.append(previous)
             let verticalSpacing = self.verticalSpacing
-            let butLast = sizes.reversed().suffix(from: 1)
-            for size in butLast {
+            let butLast = rects.reversed().suffix(from: 1)
+            for rect in butLast {
                 let y = previous.layoutOrigin.layoutY
                     - verticalSpacing
-                    - size.layoutHeight
-                let origin = UPoint(layoutX: 0, layoutY: y)
+                    - rect.layoutHeight
+                let origin = UPoint(layoutX: rect.layoutOrigin.layoutX, layoutY: y)
                 let rect = Rect(layoutOrigin: origin,
-                                layoutSize: size)
+                                layoutSize: rect.layoutSize)
                 positions.append(rect)
                 previous = rect
             }

@@ -25,8 +25,8 @@
 import Foundation
 
 public protocol Usher {
-    func positioning<Rect, Size>(ofSizes sizes: [Size], inBounds bounds: Rect) throws -> [Rect]
-    where Rect: UsherRect, Size: UsherSize
+    func positioning<Rect>(ofRects rects: [Rect], inBounds bounds: Rect) throws -> [Rect]
+    where Rect: UsherRect
     
     func requiredSizeForPositioning<Size>(sizes: [Size]) -> Size where Size: UsherSize
     

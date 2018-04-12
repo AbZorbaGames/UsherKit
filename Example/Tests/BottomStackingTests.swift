@@ -71,10 +71,13 @@ class BottomStackingTests: XCTestCase {
         
         let layout = BottomStackingLayout(verticalSpacing: verticalSpacing,
                                        insets: insets)
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
         do {
-            let rects = try layout.positioning(ofSizes: sizes, inBounds: bounds)
-            XCTAssert(rects.count == sizes.count)
-            XCTAssert(rects == expectedResults)
+            let outRects = try layout.positioning(ofRects: inRects, inBounds: bounds)
+            XCTAssert(outRects.count == inRects.count)
+            XCTAssert(outRects == expectedResults)
         } catch {
             XCTFail()
         }
@@ -95,7 +98,10 @@ class BottomStackingTests: XCTestCase {
         let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 200, height: 50))
         let layout = BottomStackingLayout(verticalSpacing: verticalSpacing,
                                        insets: insets)
-        XCTAssertThrowsError(try layout.positioning(ofSizes: sizes, inBounds: bounds))
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
+        XCTAssertThrowsError(try layout.positioning(ofRects: inRects, inBounds: bounds))
     }
     
     func testEmptyPositioning() {
@@ -108,6 +114,9 @@ class BottomStackingTests: XCTestCase {
         let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 200, height: 50))
         let layout = BottomStackingLayout(verticalSpacing: verticalSpacing,
                                        insets: insets)
-        XCTAssertThrowsError(try layout.positioning(ofSizes: sizes, inBounds: bounds))
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
+        XCTAssertThrowsError(try layout.positioning(ofRects: inRects, inBounds: bounds))
     }
 }

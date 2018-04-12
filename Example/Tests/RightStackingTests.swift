@@ -70,7 +70,7 @@ class RightStackingTests: XCTestCase {
             CGSize(width: 20, height: 20),
             ]
         let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 250, height: 50))
-        let results = [
+        let expectedResults = [
             CGRect(x: bounds.width - CGFloat(insets.right) - sizes[3].width - CGFloat(horizontalSpacing * 3) - sizes[2].width - sizes[1].width - sizes[0].width, y: 0, width: sizes[0].width, height: sizes[0].height),
             CGRect(x: bounds.width - CGFloat(insets.right) - sizes[3].width - CGFloat(horizontalSpacing * 2) - sizes[2].width - sizes[1].width, y: 0, width: sizes[1].width, height: sizes[1].height),
             CGRect(x: bounds.width - CGFloat(insets.right) - sizes[3].width - CGFloat(horizontalSpacing) - sizes[2].width, y: 0, width: sizes[2].width, height: sizes[2].height),
@@ -79,10 +79,13 @@ class RightStackingTests: XCTestCase {
         
         let layout = RightStackingLayout(horizontalSpacing: horizontalSpacing,
                                         insets: insets)
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
         do {
-            let rects = try layout.positioning(ofSizes: sizes, inBounds: bounds)
-            XCTAssert(rects.count == sizes.count)
-            XCTAssert(rects == results)
+            let outRects = try layout.positioning(ofRects: inRects, inBounds: bounds)
+            XCTAssert(outRects.count == inRects.count)
+            XCTAssert(outRects == expectedResults)
         } catch {
             XCTFail()
         }
@@ -103,7 +106,10 @@ class RightStackingTests: XCTestCase {
         let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 200, height: 50))
         let layout = RightStackingLayout(horizontalSpacing: horizontalSpacing,
                                         insets: insets)
-        XCTAssertThrowsError(try layout.positioning(ofSizes: sizes, inBounds: bounds))
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
+        XCTAssertThrowsError(try layout.positioning(ofRects: inRects, inBounds: bounds))
     }
     
     func testEmptyPositioning() {
@@ -116,6 +122,9 @@ class RightStackingTests: XCTestCase {
         let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 200, height: 50))
         let layout = RightStackingLayout(horizontalSpacing: horizontalSpacing,
                                         insets: insets)
-        XCTAssertThrowsError(try layout.positioning(ofSizes: sizes, inBounds: bounds))
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
+        XCTAssertThrowsError(try layout.positioning(ofRects: inRects, inBounds: bounds))
     }
 }

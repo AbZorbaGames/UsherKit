@@ -128,7 +128,7 @@ class LeftStackingTests: XCTestCase {
             CGSize(width: 40, height: 30),
             CGSize(width: 25, height: 20),
             ]
-        let results = [
+        let expectedRsults = [
             CGRect(x: CGFloat(insets.left), y: 0, width: sizes[0].width, height: sizes[0].height),
             CGRect(x: CGFloat(insets.left) + CGFloat(horizontalSpacing) + sizes[0].width, y: 0, width: sizes[1].width, height: sizes[1].height),
             CGRect(x: CGFloat(insets.left) + CGFloat(horizontalSpacing * 2) + sizes[0].width + sizes[1].width, y: 0, width: sizes[2].width, height: sizes[2].height),
@@ -138,10 +138,13 @@ class LeftStackingTests: XCTestCase {
         let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 250, height: 50))
         let layout = LeftStackingLayout(horizontalSpacing: horizontalSpacing,
                                         insets: insets)
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
         do {
-            let rects = try layout.positioning(ofSizes: sizes, inBounds: bounds)
-            XCTAssert(rects.count == sizes.count)
-            XCTAssert(rects == results)
+            let outRects = try layout.positioning(ofRects: inRects, inBounds: bounds)
+            XCTAssert(outRects.count == inRects.count)
+            XCTAssert(outRects == expectedRsults)
         } catch {
             XCTFail()
         }
@@ -162,7 +165,10 @@ class LeftStackingTests: XCTestCase {
         let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 200, height: 50))
         let layout = LeftStackingLayout(horizontalSpacing: horizontalSpacing,
                                         insets: insets)
-        XCTAssertThrowsError(try layout.positioning(ofSizes: sizes, inBounds: bounds))
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
+        XCTAssertThrowsError(try layout.positioning(ofRects: inRects, inBounds: bounds))
     }
     
     func testEmptyPositioning() {
@@ -175,6 +181,9 @@ class LeftStackingTests: XCTestCase {
         let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 200, height: 50))
         let layout = LeftStackingLayout(horizontalSpacing: horizontalSpacing,
                                         insets: insets)
-        XCTAssertThrowsError(try layout.positioning(ofSizes: sizes, inBounds: bounds))
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
+        XCTAssertThrowsError(try layout.positioning(ofRects: inRects, inBounds: bounds))
     }
 }
