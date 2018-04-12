@@ -30,30 +30,32 @@ public extension LeftStackingHorizontalUsher {
     
     func positioning<Rect, Size>(ofSizes sizes: [Size], inBounds bounds: Rect) throws -> [Rect]
         where Rect: UsherRect, Size: UsherSize {
-            let size = self.requiredSizeForPositioning(sizes: sizes)
+            guard sizes.isEmpty == false else { throw UsherError.noInput }
             
+            let size = self.requiredSizeForPositioning(sizes: sizes)
             print("asking to layout sizes: \(size) in bounds: \(bounds) requiredSize: \(size)")
+            
             guard bounds.layoutWidth >= size.layoutWidth,
                 bounds.layoutHeight >= size.layoutHeight else { throw UsherError.cannotFit }
             
-            guard sizes.isEmpty == false else { throw UsherError.noInput }
             
             var positions: [Rect] = []
             var previous = Rect(layoutOrigin: UPoint.zero,
                                 layoutSize: sizes[0])
             previous.layoutOrigin.layoutX = self.insets.left
             positions.append(previous)
-            for (index, size) in sizes.enumerated() {
-                guard index > 0 else { continue }
-                var rect = previous
-                rect.layoutOrigin.layoutX = previous.layoutOrigin.layoutX + previous.layoutWidth + self.horizontalSpacing
-                rect.layoutHeight = size.layoutHeight
+            let horizontalSpacing = self.horizontalSpacing
+            for size in sizes.suffix(from: 1) {
+                let x = previous.layoutOrigin.layoutX
+                    + previous.layoutWidth
+                    + horizontalSpacing
+                let origin = UPoint(layoutX: x, layoutY: 0)
+                
+                let rect = Rect(layoutOrigin: origin, layoutSize: size)
                 positions.append(rect)
                 previous = rect
             }
             print("responses rects: \(positions)")
             return positions
     }
-    
 }
-
