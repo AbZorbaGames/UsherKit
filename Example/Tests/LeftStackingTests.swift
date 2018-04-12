@@ -67,12 +67,14 @@ extension CGRect: UsherRect {
     }
 }
 
-struct LeftStackingLayout: LeftStackingHorizontalUsher {
-    var horizontalSpacing: Float
-    var insets: UsherInsets
-}
 
-class Tests: XCTestCase {
+class LeftStackingTests: XCTestCase {
+    
+    
+    struct LeftStackingLayout: LeftStackingHorizontalUsher {
+        var horizontalSpacing: Float
+        var insets: UsherInsets
+    }
     
     override func setUp() {
         super.setUp()
@@ -122,9 +124,9 @@ class Tests: XCTestCase {
         
         let sizes = [
             CGSize(width: 50, height: 20),
-            CGSize(width: 50, height: 10),
-            CGSize(width: 50, height: 30),
-            CGSize(width: 50, height: 20),
+            CGSize(width: 55, height: 10),
+            CGSize(width: 40, height: 30),
+            CGSize(width: 25, height: 20),
             ]
         let results = [
             CGRect(x: CGFloat(insets.left), y: 0, width: sizes[0].width, height: sizes[0].height),
@@ -175,13 +177,4 @@ class Tests: XCTestCase {
                                         insets: insets)
         XCTAssertThrowsError(try layout.positioning(ofSizes: sizes, inBounds: bounds))
     }
-    
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
