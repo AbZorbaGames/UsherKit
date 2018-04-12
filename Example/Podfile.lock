@@ -1,5 +1,5 @@
 PODS:
-  - UsherKit (0.2.1)
+  - UsherKit (0.2.2)
 
 DEPENDENCIES:
   - UsherKit (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  UsherKit: 7721484fe7e6abceb2d9d3d339649e7dbde6512b
+  UsherKit: 7f419c65811c5eb5865751f9bd4117b2bded79e2
 
 PODFILE CHECKSUM: 2ff02d97b0e10e0e04246cb1093100910ff29f1b
 
