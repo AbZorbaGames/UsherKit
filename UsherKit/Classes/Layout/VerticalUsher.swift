@@ -24,27 +24,25 @@
 //
 import Foundation
 
-//public protocol VerticalLayout: Layout {
-//    var verticalSpacing: Float { get set }
-//}
-//
-//
-//public extension VerticalLayout {
-//
-//    func requiredSizeForPositioning(rectangulars: [UsherRect]) -> UsherSize {
-//        assert(rectangulars.isEmpty == false)
-//        guard rectangulars.isEmpty == false else { return UsherSize.zero }
-//
-//        let first = rectangulars[0]
-//        var (width, height) = (first.width, first.height)
-//        rectangulars.forEach { (rect: UsherRect) in
-//            if rect.width > width {
-//                width = rect.width
-//            }
-//            height += (self.verticalSpacing + rect.height)
-//        }
-//        width += (self.insets.top + self.insets.bottom)
-//        return UsherSize(width: width, height: height)
-//    }
-//}
+public protocol VerticalUsher: Usher {
+    var verticalSpacing: Float { get }
+}
+
+
+public extension VerticalUsher {
+
+    func requiredSizeForPositioning<Size>(sizes: [Size]) -> Size where Size: UsherSize {
+        guard sizes.isEmpty == false else { return Size(layoutWidth: 0, layoutHeight: 0) }
+
+        let maxWidth = sizes.max(by: { (s1: UsherSize, s2: UsherSize) -> Bool in
+            return s1.layoutWidth < s2.layoutWidth
+        })!.layoutWidth
+        
+        let verticalSpacing = self.verticalSpacing
+        let totalHeight = sizes.reduce(Float(0), { (sum: Float, size: UsherSize) -> Float in
+            return sum + size.layoutHeight + verticalSpacing
+        }) + (self.insets.top + self.insets.bottom) - verticalSpacing
+        return Size(layoutWidth: maxWidth, layoutHeight: totalHeight)
+    }
+}
 
