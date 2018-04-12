@@ -32,6 +32,12 @@ public extension VerticalUsher {
 
     func requiredSizeForPositioning<Size>(sizes: [Size]) -> Size where Size: UsherSize {
         guard sizes.isEmpty == false else { return Size(layoutWidth: 0, layoutHeight: 0) }
+        
+        if sizes.count == 1 {
+            var requiredSize = sizes[0]
+            requiredSize.layoutHeight += (self.insets.top + self.insets.bottom)
+            return requiredSize
+        }
 
         let maxWidth = sizes.max(by: { (s1: UsherSize, s2: UsherSize) -> Bool in
             return s1.layoutWidth < s2.layoutWidth

@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		04DE09F9A1907B5092FB9C4ABE3F74EE /* Pods-UsherKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53B5217857070FFEA7C3C293DF63086C /* Pods-UsherKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		087263455246789A025E8ACB8848455F /* UsherKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B87A345CB4E7700AA46F17EA7655D873 /* UsherKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		087263455246789A025E8ACB8848455F /* UsherKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F407EB521D20749E37F269A26AD82C9 /* UsherKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D605CAA90BA816683E09117100C2F48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		340F5E7845934490D59D7B5D460A9823 /* LeftStackingHorizontalUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C913E91997E03F43BFB4867B2D3F5C /* LeftStackingHorizontalUsher.swift */; };
 		3B3A745144E93D23F4182E54E921BF5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		55BAE407D3C262A3EA72B77FB3617257 /* UsherTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7825ADE3C7EE9E14F87586BADA6A702 /* UsherTypes.swift */; };
-		60E720CD512C9DA705F31DCFF920A0D5 /* HorizontalUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E86CB671F39AED9B4843AA66DE4880 /* HorizontalUsher.swift */; };
-		6153E95818557EDFFCEFA4A3ED00717D /* IdentityUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399544EFA51DB23DF9AFB352593E12D /* IdentityUsher.swift */; };
-		82CC6533DA78C69C9944CB2F6686EABA /* Usher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BF2B1F6285EE284E893C862736A793 /* Usher.swift */; };
-		8465FB8398EA5293E2919F916B5263D1 /* LeftStackingHorizontalUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6AF32322691F41A47D13500049FBB /* LeftStackingHorizontalUsher.swift */; };
-		87EF3C4C9E94E66E88BA7C3728C0DAEC /* TopStackingVerticalUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D68834D86FC4576EF07C92A1F615D6 /* TopStackingVerticalUsher.swift */; };
-		9095A528D176C50C88411D3FD196C8AA /* UsherKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EA2707A94600EEC5BC34BE3F5DD5A7 /* UsherKit-dummy.m */; };
-		A700FA4D5971AD71C19C213B97A1E100 /* RightStackingHorizontalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD6F49D90A7DAB885EF513520F04B0 /* RightStackingHorizontalLayout.swift */; };
-		AD7A140A032DAE50CF95F2A8645B4F16 /* VerticalCenteringUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6E537F029EC5C9D9F5DAF52BF41C7 /* VerticalCenteringUsher.swift */; };
-		AF8B5E219E39204020947182872528ED /* UsherInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14032775EA5C76F0E4349DE7BF8C94D /* UsherInsets.swift */; };
-		B188E333623D3F9DC969E8B689D882A8 /* BottomStackingVerticalUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402A0DC0BCB5327F92A29741FBEE1B54 /* BottomStackingVerticalUsher.swift */; };
+		46EF686B8F24270F235E5531312752CE /* HorizontalCenteringUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF20402ECFA25FB2674F3C2BF041A6A /* HorizontalCenteringUsher.swift */; };
+		6A037E7F836A1D602A9BB3A4BB7EB53F /* VerticalUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4929F0769D5B6996C7BC927DCBA65897 /* VerticalUsher.swift */; };
+		74C4D910CA7D49D986E722423AEAD6FB /* UsherInternalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9117766626818C9D0C2B8C9E3247FD /* UsherInternalTypes.swift */; };
+		7591B6B3A7F2E58B657E6D45530C7B6C /* Usher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B89D36473D82F9144ABA6BB9C2AB3C /* Usher.swift */; };
+		78392D87DF1B68B14A703173AA14E820 /* VerticalCenteringUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C578AEC4EC9AF3BE98854157EE8D5 /* VerticalCenteringUsher.swift */; };
+		8655223220836C70765E5ED66D8E1251 /* IdentityUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402FCCDBA63120AFFB398568C2C83A91 /* IdentityUsher.swift */; };
+		8C64C96495AE838AFE5B264E3587FD99 /* BottomStackingVerticalUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EDB4C3ABD6C6FC6EFCC352C86566EE /* BottomStackingVerticalUsher.swift */; };
+		B1EBEE242256B073228A2921E3C0CAB3 /* LeftStackingVerticalCenteringLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94951E87E3ECC14F0F9B32D788808F04 /* LeftStackingVerticalCenteringLayout.swift */; };
+		B60697331EAFC409E7AF798A124E9183 /* UsherTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3819F6C5CD5BC6C9B90DDD0098FC5E5 /* UsherTypes.swift */; };
 		BAF6249686942CAF41E6D4AEA1C5DC0E /* Pods-UsherKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8255C91D11DD91113263E3322406B5 /* Pods-UsherKit_Tests-dummy.m */; };
-		C494761B201EBA98CB84887A39C986AE /* VerticalUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA8C3CD17A8B9C1D47673E8874EB2 /* VerticalUsher.swift */; };
-		E99D768C8394232FD25DE21B5CCFAC75 /* HorizontalCenteringUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F0A9D5AE14E80702C4F4DC233C7260 /* HorizontalCenteringUsher.swift */; };
-		EDCD46DD8D6E74F692BB2797EBA81997 /* UsherInternalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EEA91A516193720BBBF0AB0B3DD39 /* UsherInternalTypes.swift */; };
+		BFD66EB3B8113B665FF50FF21D9A696E /* HorizontalUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EF1CB884A3B4E6BD27C6353FA3CF81 /* HorizontalUsher.swift */; };
+		C26DF5A4AD5F13503C9BA168134E5352 /* UsherInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CADAFC80B187D72C8D8725482E290 /* UsherInsets.swift */; };
+		C4C2E5E3BBFC0F60AF784EA31EC9BD6D /* RightStackingHorizontalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622EEF4B413D87D247132BE46BC4919D /* RightStackingHorizontalLayout.swift */; };
+		D05F477C8B2D06BADFAB3DB958316FEB /* TopStackingVerticalUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996ABC549F3ABC56BFEB831309EEA631 /* TopStackingVerticalUsher.swift */; };
+		DEABF4F90D8FFD207A6ABF51C2C061C7 /* CenterStackingHorizontalUsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF43FA095951652E5CD4C8DA53AF6CF /* CenterStackingHorizontalUsher.swift */; };
+		E8E5F572C6F485EE28D90D6A52DD1C34 /* UsherKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C87104CCE8704E3DD509BDF5F6A920B /* UsherKit-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,42 +41,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01D6E537F029EC5C9D9F5DAF52BF41C7 /* VerticalCenteringUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerticalCenteringUsher.swift; sourceTree = "<group>"; };
-		02DAB9D92EA65AE0111F9298665B77F0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0A8255C91D11DD91113263E3322406B5 /* Pods-UsherKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UsherKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		12BF2B1F6285EE284E893C862736A793 /* Usher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Usher.swift; sourceTree = "<group>"; };
-		192A86C9BD63D58057F83DB7106C445E /* UsherKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UsherKit.xcconfig; sourceTree = "<group>"; };
+		0CF43FA095951652E5CD4C8DA53AF6CF /* CenterStackingHorizontalUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CenterStackingHorizontalUsher.swift; sourceTree = "<group>"; };
 		204369BB1811B32FB72F44FC68220D11 /* Pods-UsherKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UsherKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		20D68834D86FC4576EF07C92A1F615D6 /* TopStackingVerticalUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopStackingVerticalUsher.swift; sourceTree = "<group>"; };
-		22F6AF32322691F41A47D13500049FBB /* LeftStackingHorizontalUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LeftStackingHorizontalUsher.swift; sourceTree = "<group>"; };
-		2D0EEA91A516193720BBBF0AB0B3DD39 /* UsherInternalTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsherInternalTypes.swift; sourceTree = "<group>"; };
-		38CF5D0B662DAEB6BC6993E6E7FE63CD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2656BEAE0DE6244E453C6D2787A79D2D /* UsherKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UsherKit.xcconfig; sourceTree = "<group>"; };
+		2C87104CCE8704E3DD509BDF5F6A920B /* UsherKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UsherKit-dummy.m"; sourceTree = "<group>"; };
+		2FF20402ECFA25FB2674F3C2BF041A6A /* HorizontalCenteringUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HorizontalCenteringUsher.swift; sourceTree = "<group>"; };
+		351C578AEC4EC9AF3BE98854157EE8D5 /* VerticalCenteringUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerticalCenteringUsher.swift; sourceTree = "<group>"; };
+		374CADAFC80B187D72C8D8725482E290 /* UsherInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsherInsets.swift; sourceTree = "<group>"; };
 		3F60B2F809A5C5A051DD3A5422B6D749 /* Pods-UsherKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UsherKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		402A0DC0BCB5327F92A29741FBEE1B54 /* BottomStackingVerticalUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BottomStackingVerticalUsher.swift; sourceTree = "<group>"; };
-		45EA2707A94600EEC5BC34BE3F5DD5A7 /* UsherKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UsherKit-dummy.m"; sourceTree = "<group>"; };
-		4ED31B069FB581D6BE9D78C97CFC72CC /* Pods_UsherKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UsherKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		402FCCDBA63120AFFB398568C2C83A91 /* IdentityUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IdentityUsher.swift; sourceTree = "<group>"; };
+		43C913E91997E03F43BFB4867B2D3F5C /* LeftStackingHorizontalUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LeftStackingHorizontalUsher.swift; sourceTree = "<group>"; };
+		4929F0769D5B6996C7BC927DCBA65897 /* VerticalUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerticalUsher.swift; sourceTree = "<group>"; };
+		4ED31B069FB581D6BE9D78C97CFC72CC /* Pods_UsherKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UsherKit_Tests.framework; path = "Pods-UsherKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F407EB521D20749E37F269A26AD82C9 /* UsherKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UsherKit-umbrella.h"; sourceTree = "<group>"; };
 		53B5217857070FFEA7C3C293DF63086C /* Pods-UsherKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UsherKit_Tests-umbrella.h"; sourceTree = "<group>"; };
+		5F9117766626818C9D0C2B8C9E3247FD /* UsherInternalTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsherInternalTypes.swift; sourceTree = "<group>"; };
+		622EEF4B413D87D247132BE46BC4919D /* RightStackingHorizontalLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RightStackingHorizontalLayout.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6B44E0237527627726A4BD84E6356EFE /* Pods-UsherKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UsherKit_Tests-resources.sh"; sourceTree = "<group>"; };
+		6F6AF1D6DCFFB74DCB851D35EC8F03AE /* UsherKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UsherKit-prefix.pch"; sourceTree = "<group>"; };
 		709AB253C0160644B849C27F51006680 /* Pods-UsherKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UsherKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		79E6CCC959F34AF07D80A94A40A97E56 /* UsherKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UsherKit-prefix.pch"; sourceTree = "<group>"; };
+		769B55F2B76E2974224A62CD2506849E /* UsherKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UsherKit.modulemap; sourceTree = "<group>"; };
 		841EA97AF1F9B81946756F0562D12FDF /* Pods-UsherKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UsherKit_Tests.modulemap"; sourceTree = "<group>"; };
 		8F077A13E906D28ECE57282AD0F6C09F /* Pods-UsherKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UsherKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9399544EFA51DB23DF9AFB352593E12D /* IdentityUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IdentityUsher.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DEBA8C3CD17A8B9C1D47673E8874EB2 /* VerticalUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerticalUsher.swift; sourceTree = "<group>"; };
-		9E47F4461382C277E43B4DE9274B839B /* UsherKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UsherKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94951E87E3ECC14F0F9B32D788808F04 /* LeftStackingVerticalCenteringLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LeftStackingVerticalCenteringLayout.swift; sourceTree = "<group>"; };
+		996ABC549F3ABC56BFEB831309EEA631 /* TopStackingVerticalUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopStackingVerticalUsher.swift; sourceTree = "<group>"; };
+		9D994405707E118225CEEE65027DDC72 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9E47F4461382C277E43B4DE9274B839B /* UsherKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UsherKit.framework; path = UsherKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E8BFFEA2CD9BE4B09F4143B52FE6928 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F5BE6F493E3964EAA0EAB2E775E0FCC /* Pods-UsherKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UsherKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B87A345CB4E7700AA46F17EA7655D873 /* UsherKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UsherKit-umbrella.h"; sourceTree = "<group>"; };
 		BAC4BFDD19EC3252C569544FA88363EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAF1402A457985985D8D9E84577A65F7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCF29D1E2B5C8FD18957B385A21CC348 /* UsherKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = UsherKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BEAD6F49D90A7DAB885EF513520F04B0 /* RightStackingHorizontalLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RightStackingHorizontalLayout.swift; sourceTree = "<group>"; };
-		C4E86CB671F39AED9B4843AA66DE4880 /* HorizontalUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HorizontalUsher.swift; sourceTree = "<group>"; };
-		D14032775EA5C76F0E4349DE7BF8C94D /* UsherInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsherInsets.swift; sourceTree = "<group>"; };
-		E6F0A9D5AE14E80702C4F4DC233C7260 /* HorizontalCenteringUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HorizontalCenteringUsher.swift; sourceTree = "<group>"; };
-		E7825ADE3C7EE9E14F87586BADA6A702 /* UsherTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsherTypes.swift; sourceTree = "<group>"; };
-		FBD4FCCCC4342E3B086D49008D5661FA /* UsherKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UsherKit.modulemap; sourceTree = "<group>"; };
+		C340783CF782160235149F4821FAA221 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C9EF1CB884A3B4E6BD27C6353FA3CF81 /* HorizontalUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HorizontalUsher.swift; sourceTree = "<group>"; };
+		E3819F6C5CD5BC6C9B90DDD0098FC5E5 /* UsherTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsherTypes.swift; sourceTree = "<group>"; };
+		E6B89D36473D82F9144ABA6BB9C2AB3C /* Usher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Usher.swift; sourceTree = "<group>"; };
+		E94196177A858C8012442AC55D305D99 /* UsherKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = UsherKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F1EDB4C3ABD6C6FC6EFCC352C86566EE /* BottomStackingVerticalUsher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BottomStackingVerticalUsher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,26 +101,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0146D999BE3130C08F1E17BB2786A9BF /* usher */ = {
+		01EFC2F48CA439C3893554841B3F9C3B /* usher */ = {
 			isa = PBXGroup;
 			children = (
-				C4E86CB671F39AED9B4843AA66DE4880 /* HorizontalUsher.swift */,
-				12BF2B1F6285EE284E893C862736A793 /* Usher.swift */,
-				9DEBA8C3CD17A8B9C1D47673E8874EB2 /* VerticalUsher.swift */,
+				C9EF1CB884A3B4E6BD27C6353FA3CF81 /* HorizontalUsher.swift */,
+				E6B89D36473D82F9144ABA6BB9C2AB3C /* Usher.swift */,
+				4929F0769D5B6996C7BC927DCBA65897 /* VerticalUsher.swift */,
 			);
 			name = usher;
 			path = UsherKit/Classes/usher;
 			sourceTree = "<group>";
 		};
-		1F4B254BC9BEB1735B83852BF12F47E2 /* types */ = {
+		083599097B3C0C11A5B44097D10BCFC8 /* UsherKit */ = {
 			isa = PBXGroup;
 			children = (
-				D14032775EA5C76F0E4349DE7BF8C94D /* UsherInsets.swift */,
-				2D0EEA91A516193720BBBF0AB0B3DD39 /* UsherInternalTypes.swift */,
-				E7825ADE3C7EE9E14F87586BADA6A702 /* UsherTypes.swift */,
+				3F8649D236B410675B935D732E0A7C22 /* layouts */,
+				4DCF7E04963109E10A1BB2900E9B9094 /* Pod */,
+				15F8EA079C0FA274BF56FE8294868FA8 /* Support Files */,
+				862499D3A5B64E65E8D336CC72CDD99A /* types */,
+				01EFC2F48CA439C3893554841B3F9C3B /* usher */,
+				BEF701B954248ACE1566E1D1E22F1F44 /* ushers */,
 			);
-			name = types;
-			path = UsherKit/Classes/types;
+			name = UsherKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		15F8EA079C0FA274BF56FE8294868FA8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E8BFFEA2CD9BE4B09F4143B52FE6928 /* Info.plist */,
+				769B55F2B76E2974224A62CD2506849E /* UsherKit.modulemap */,
+				2656BEAE0DE6244E453C6D2787A79D2D /* UsherKit.xcconfig */,
+				2C87104CCE8704E3DD509BDF5F6A920B /* UsherKit-dummy.m */,
+				6F6AF1D6DCFFB74DCB851D35EC8F03AE /* UsherKit-prefix.pch */,
+				4F407EB521D20749E37F269A26AD82C9 /* UsherKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/UsherKit";
+			sourceTree = "<group>";
+		};
+		3F8649D236B410675B935D732E0A7C22 /* layouts */ = {
+			isa = PBXGroup;
+			children = (
+				94951E87E3ECC14F0F9B32D788808F04 /* LeftStackingVerticalCenteringLayout.swift */,
+			);
+			name = layouts;
+			path = UsherKit/Classes/layouts;
 			sourceTree = "<group>";
 		};
 		44E37EA870E17DD5B4B6BACA6E493EC3 /* Pods-UsherKit_Tests */ = {
@@ -137,26 +167,20 @@
 			path = "Target Support Files/Pods-UsherKit_Tests";
 			sourceTree = "<group>";
 		};
-		4D40F2C1293544ECEC4C6144F752B0B3 /* Support Files */ = {
+		4D13D35EA200D591FCBD0698D4D7A20C /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BAF1402A457985985D8D9E84577A65F7 /* Info.plist */,
-				FBD4FCCCC4342E3B086D49008D5661FA /* UsherKit.modulemap */,
-				192A86C9BD63D58057F83DB7106C445E /* UsherKit.xcconfig */,
-				45EA2707A94600EEC5BC34BE3F5DD5A7 /* UsherKit-dummy.m */,
-				79E6CCC959F34AF07D80A94A40A97E56 /* UsherKit-prefix.pch */,
-				B87A345CB4E7700AA46F17EA7655D873 /* UsherKit-umbrella.h */,
+				083599097B3C0C11A5B44097D10BCFC8 /* UsherKit */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/UsherKit";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		5850AE75B03DC8738348264E1B8B1D28 /* Pod */ = {
+		4DCF7E04963109E10A1BB2900E9B9094 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				02DAB9D92EA65AE0111F9298665B77F0 /* LICENSE */,
-				38CF5D0B662DAEB6BC6993E6E7FE63CD /* README.md */,
-				BCF29D1E2B5C8FD18957B385A21CC348 /* UsherKit.podspec */,
+				9D994405707E118225CEEE65027DDC72 /* LICENSE */,
+				C340783CF782160235149F4821FAA221 /* README.md */,
+				E94196177A858C8012442AC55D305D99 /* UsherKit.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -165,11 +189,22 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				AA0779850F1555BC1EB2E480F7B10C0F /* Development Pods */,
+				4D13D35EA200D591FCBD0698D4D7A20C /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				EE22CCFDD05AE906143B52ECBA5D1014 /* Products */,
 				A87BEA4F99EF8FB486B774C3574A11E6 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		862499D3A5B64E65E8D336CC72CDD99A /* types */ = {
+			isa = PBXGroup;
+			children = (
+				374CADAFC80B187D72C8D8725482E290 /* UsherInsets.swift */,
+				5F9117766626818C9D0C2B8C9E3247FD /* UsherInternalTypes.swift */,
+				E3819F6C5CD5BC6C9B90DDD0098FC5E5 /* UsherTypes.swift */,
+			);
+			name = types;
+			path = UsherKit/Classes/types;
 			sourceTree = "<group>";
 		};
 		A87BEA4F99EF8FB486B774C3574A11E6 /* Targets Support Files */ = {
@@ -180,14 +215,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		AA0779850F1555BC1EB2E480F7B10C0F /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C02624DC6253D9055B39596672A85FC7 /* UsherKit */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,17 +223,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C02624DC6253D9055B39596672A85FC7 /* UsherKit */ = {
+		BEF701B954248ACE1566E1D1E22F1F44 /* ushers */ = {
 			isa = PBXGroup;
 			children = (
-				0146D999BE3130C08F1E17BB2786A9BF /* usher */,
-				E3C473E154E2D3AB0B851946FCE4C11E /* ushers */,
-				5850AE75B03DC8738348264E1B8B1D28 /* Pod */,
-				4D40F2C1293544ECEC4C6144F752B0B3 /* Support Files */,
-				1F4B254BC9BEB1735B83852BF12F47E2 /* types */,
+				F1EDB4C3ABD6C6FC6EFCC352C86566EE /* BottomStackingVerticalUsher.swift */,
+				0CF43FA095951652E5CD4C8DA53AF6CF /* CenterStackingHorizontalUsher.swift */,
+				2FF20402ECFA25FB2674F3C2BF041A6A /* HorizontalCenteringUsher.swift */,
+				402FCCDBA63120AFFB398568C2C83A91 /* IdentityUsher.swift */,
+				43C913E91997E03F43BFB4867B2D3F5C /* LeftStackingHorizontalUsher.swift */,
+				622EEF4B413D87D247132BE46BC4919D /* RightStackingHorizontalLayout.swift */,
+				996ABC549F3ABC56BFEB831309EEA631 /* TopStackingVerticalUsher.swift */,
+				351C578AEC4EC9AF3BE98854157EE8D5 /* VerticalCenteringUsher.swift */,
 			);
-			name = UsherKit;
-			path = ../..;
+			name = ushers;
+			path = UsherKit/Classes/ushers;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -215,21 +245,6 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		E3C473E154E2D3AB0B851946FCE4C11E /* ushers */ = {
-			isa = PBXGroup;
-			children = (
-				402A0DC0BCB5327F92A29741FBEE1B54 /* BottomStackingVerticalUsher.swift */,
-				E6F0A9D5AE14E80702C4F4DC233C7260 /* HorizontalCenteringUsher.swift */,
-				9399544EFA51DB23DF9AFB352593E12D /* IdentityUsher.swift */,
-				22F6AF32322691F41A47D13500049FBB /* LeftStackingHorizontalUsher.swift */,
-				BEAD6F49D90A7DAB885EF513520F04B0 /* RightStackingHorizontalLayout.swift */,
-				20D68834D86FC4576EF07C92A1F615D6 /* TopStackingVerticalUsher.swift */,
-				01D6E537F029EC5C9D9F5DAF52BF41C7 /* VerticalCenteringUsher.swift */,
-			);
-			name = ushers;
-			path = UsherKit/Classes/ushers;
 			sourceTree = "<group>";
 		};
 		EE22CCFDD05AE906143B52ECBA5D1014 /* Products */ = {
@@ -267,7 +282,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC35C65FDFF72E76B6D6F787E9470E61 /* Build configuration list for PBXNativeTarget "UsherKit" */;
 			buildPhases = (
-				92ABFE908DC2438E5A391A81D27CDA5D /* Sources */,
+				B82CFA9A1802E9B2E94FA842E08C288C /* Sources */,
 				532D8B3AAA7D7B13297AA529AC357461 /* Frameworks */,
 				D7F8D9F996FDEA69C758790A1EC39129 /* Headers */,
 			);
@@ -334,24 +349,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92ABFE908DC2438E5A391A81D27CDA5D /* Sources */ = {
+		B82CFA9A1802E9B2E94FA842E08C288C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B188E333623D3F9DC969E8B689D882A8 /* BottomStackingVerticalUsher.swift in Sources */,
-				E99D768C8394232FD25DE21B5CCFAC75 /* HorizontalCenteringUsher.swift in Sources */,
-				60E720CD512C9DA705F31DCFF920A0D5 /* HorizontalUsher.swift in Sources */,
-				6153E95818557EDFFCEFA4A3ED00717D /* IdentityUsher.swift in Sources */,
-				8465FB8398EA5293E2919F916B5263D1 /* LeftStackingHorizontalUsher.swift in Sources */,
-				A700FA4D5971AD71C19C213B97A1E100 /* RightStackingHorizontalLayout.swift in Sources */,
-				87EF3C4C9E94E66E88BA7C3728C0DAEC /* TopStackingVerticalUsher.swift in Sources */,
-				82CC6533DA78C69C9944CB2F6686EABA /* Usher.swift in Sources */,
-				AF8B5E219E39204020947182872528ED /* UsherInsets.swift in Sources */,
-				EDCD46DD8D6E74F692BB2797EBA81997 /* UsherInternalTypes.swift in Sources */,
-				9095A528D176C50C88411D3FD196C8AA /* UsherKit-dummy.m in Sources */,
-				55BAE407D3C262A3EA72B77FB3617257 /* UsherTypes.swift in Sources */,
-				AD7A140A032DAE50CF95F2A8645B4F16 /* VerticalCenteringUsher.swift in Sources */,
-				C494761B201EBA98CB84887A39C986AE /* VerticalUsher.swift in Sources */,
+				8C64C96495AE838AFE5B264E3587FD99 /* BottomStackingVerticalUsher.swift in Sources */,
+				DEABF4F90D8FFD207A6ABF51C2C061C7 /* CenterStackingHorizontalUsher.swift in Sources */,
+				46EF686B8F24270F235E5531312752CE /* HorizontalCenteringUsher.swift in Sources */,
+				BFD66EB3B8113B665FF50FF21D9A696E /* HorizontalUsher.swift in Sources */,
+				8655223220836C70765E5ED66D8E1251 /* IdentityUsher.swift in Sources */,
+				340F5E7845934490D59D7B5D460A9823 /* LeftStackingHorizontalUsher.swift in Sources */,
+				B1EBEE242256B073228A2921E3C0CAB3 /* LeftStackingVerticalCenteringLayout.swift in Sources */,
+				C4C2E5E3BBFC0F60AF784EA31EC9BD6D /* RightStackingHorizontalLayout.swift in Sources */,
+				D05F477C8B2D06BADFAB3DB958316FEB /* TopStackingVerticalUsher.swift in Sources */,
+				7591B6B3A7F2E58B657E6D45530C7B6C /* Usher.swift in Sources */,
+				C26DF5A4AD5F13503C9BA168134E5352 /* UsherInsets.swift in Sources */,
+				74C4D910CA7D49D986E722423AEAD6FB /* UsherInternalTypes.swift in Sources */,
+				E8E5F572C6F485EE28D90D6A52DD1C34 /* UsherKit-dummy.m in Sources */,
+				B60697331EAFC409E7AF798A124E9183 /* UsherTypes.swift in Sources */,
+				78392D87DF1B68B14A703173AA14E820 /* VerticalCenteringUsher.swift in Sources */,
+				6A037E7F836A1D602A9BB3A4BB7EB53F /* VerticalUsher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +519,7 @@
 		};
 		8C532BD73527A508E92CB033B8D54C83 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 192A86C9BD63D58057F83DB7106C445E /* UsherKit.xcconfig */;
+			baseConfigurationReference = 2656BEAE0DE6244E453C6D2787A79D2D /* UsherKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -535,7 +552,7 @@
 		};
 		BD2D93142625F32A7FEFE23DD1381962 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 192A86C9BD63D58057F83DB7106C445E /* UsherKit.xcconfig */;
+			baseConfigurationReference = 2656BEAE0DE6244E453C6D2787A79D2D /* UsherKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

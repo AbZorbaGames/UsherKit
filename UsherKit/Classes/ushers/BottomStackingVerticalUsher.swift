@@ -41,7 +41,7 @@ public extension BottomStackingVerticalUsher {
             
             let requiredSize = self.requiredSizeForPositioning(sizes: sizes)
             
-            print("asking to layout sizes: \(requiredSize) in bounds: \(bounds) requiredSize: \(requiredSize)")
+            print("asking to layout rects: \(rects) in bounds: \(bounds) requiredSize: \(requiredSize)")
             guard bounds.layoutWidth >= requiredSize.layoutWidth,
                 bounds.layoutHeight >= requiredSize.layoutHeight else { throw UsherError.cannotFit }
             
