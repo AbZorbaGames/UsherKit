@@ -105,7 +105,7 @@ class LeftStackingTests: XCTestCase {
         XCTAssertTrue(requiredSize.layoutHeight == Float(30))
     }
     
-    func testEmptyRequierdSizeForPositiong() {
+    func testEmptyRequiredSizeForPositiong() {
         let sizes: [CGSize] = []
         let horizontalSpacing = Float(5)
         let inset = Float(2)

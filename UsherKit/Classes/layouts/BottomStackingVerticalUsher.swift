@@ -58,6 +58,6 @@ public extension BottomStackingVerticalUsher {
                 previous = rect
             }
             print("responses rects: \(positions)")
-            return positions
+            return Array(positions.reversed())
     }
 }
