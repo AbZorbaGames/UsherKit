@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		402D60700DB4BB9A7679297C /* Pods_UsherKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E9558A10FEAD4BD76D99FF /* Pods_UsherKit_Tests.framework */; };
+		AA95349A6CE24E1A97829DCC /* Pods_UsherKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A925F2D76A3390ECF4F235E /* Pods_UsherKit_Tests.framework */; };
 		F86A531A207F6F7C001F6624 /* LeftStackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* LeftStackingTests.swift */; };
 		F86A531C207F715B001F6624 /* RightStackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8166228207F5AF00013419C /* RightStackingTests.swift */; };
 		F86A531E207F721A001F6624 /* TopStackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816622A207F647B0013419C /* TopStackingTests.swift */; };
 		F86A5320207F72A1001F6624 /* BottomStackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816622C207F66710013419C /* BottomStackingTests.swift */; };
+		F86A5326207F7608001F6624 /* HorizontalCenteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86A5325207F7608001F6624 /* HorizontalCenteringTests.swift */; };
+		F86A532A207F77BE001F6624 /* VerticalCenteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86A5329207F77BE001F6624 /* VerticalCenteringTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15EB8AD61521FA2E23F8FCED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1A925F2D76A3390ECF4F235E /* Pods_UsherKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UsherKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E446AF2EC3C4230FBB1A67A /* Pods-UsherKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsherKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UsherKit_Tests/Pods-UsherKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1EF132E9384E635DD54A2D75 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		393F72A4623329FDAEE5A095 /* Pods-UsherKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsherKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsherKit_Tests/Pods-UsherKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3E038377AD03FCDAF6A80709 /* Pods-UsherKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsherKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UsherKit_Tests/Pods-UsherKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		50E9558A10FEAD4BD76D99FF /* Pods_UsherKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UsherKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F4A2AA1D3799695A673CB9 /* Pods-UsherKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsherKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsherKit_Tests/Pods-UsherKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* UsherKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsherKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* LeftStackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftStackingTests.swift; sourceTree = "<group>"; };
@@ -27,6 +29,8 @@
 		F8166228207F5AF00013419C /* RightStackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightStackingTests.swift; sourceTree = "<group>"; };
 		F816622A207F647B0013419C /* TopStackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStackingTests.swift; sourceTree = "<group>"; };
 		F816622C207F66710013419C /* BottomStackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomStackingTests.swift; sourceTree = "<group>"; };
+		F86A5325207F7608001F6624 /* HorizontalCenteringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCenteringTests.swift; sourceTree = "<group>"; };
+		F86A5329207F77BE001F6624 /* VerticalCenteringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCenteringTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,38 +38,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				402D60700DB4BB9A7679297C /* Pods_UsherKit_Tests.framework in Frameworks */,
+				AA95349A6CE24E1A97829DCC /* Pods_UsherKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B0C2FF23D5A28412DC98D07 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				393F72A4623329FDAEE5A095 /* Pods-UsherKit_Tests.debug.xcconfig */,
-				3E038377AD03FCDAF6A80709 /* Pods-UsherKit_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		45275130190166371ECA7DD3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				50E9558A10FEAD4BD76D99FF /* Pods_UsherKit_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				0B0C2FF23D5A28412DC98D07 /* Pods */,
-				45275130190166371ECA7DD3 /* Frameworks */,
+				7D88432070D71043F962F4B7 /* Pods */,
+				B99070DC0E4B0E1647B9F342 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +71,8 @@
 				F8166228207F5AF00013419C /* RightStackingTests.swift */,
 				F816622A207F647B0013419C /* TopStackingTests.swift */,
 				F816622C207F66710013419C /* BottomStackingTests.swift */,
+				F86A5325207F7608001F6624 /* HorizontalCenteringTests.swift */,
+				F86A5329207F77BE001F6624 /* VerticalCenteringTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -107,6 +96,23 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		7D88432070D71043F962F4B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37F4A2AA1D3799695A673CB9 /* Pods-UsherKit_Tests.debug.xcconfig */,
+				1E446AF2EC3C4230FBB1A67A /* Pods-UsherKit_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B99070DC0E4B0E1647B9F342 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A925F2D76A3390ECF4F235E /* Pods_UsherKit_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,11 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "UsherKit_Tests" */;
 			buildPhases = (
-				17914945E457977749B185B4 /* [CP] Check Pods Manifest.lock */,
+				7BB1CAD32AF951EB0EEB0C8D /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				52878C6F04875CA96AA47D4B /* [CP] Embed Pods Frameworks */,
+				C68C1E143A2641AF9239C18B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,7 +181,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17914945E457977749B185B4 /* [CP] Check Pods Manifest.lock */ = {
+		7BB1CAD32AF951EB0EEB0C8D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -193,7 +199,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		52878C6F04875CA96AA47D4B /* [CP] Embed Pods Frameworks */ = {
+		C68C1E143A2641AF9239C18B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,6 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86A5326207F7608001F6624 /* HorizontalCenteringTests.swift in Sources */,
+				F86A532A207F77BE001F6624 /* VerticalCenteringTests.swift in Sources */,
 				F86A5320207F72A1001F6624 /* BottomStackingTests.swift in Sources */,
 				F86A531E207F721A001F6624 /* TopStackingTests.swift in Sources */,
 				F86A531C207F715B001F6624 /* RightStackingTests.swift in Sources */,
@@ -329,7 +337,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 393F72A4623329FDAEE5A095 /* Pods-UsherKit_Tests.debug.xcconfig */;
+			baseConfigurationReference = 37F4A2AA1D3799695A673CB9 /* Pods-UsherKit_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -350,7 +358,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E038377AD03FCDAF6A80709 /* Pods-UsherKit_Tests.release.xcconfig */;
+			baseConfigurationReference = 1E446AF2EC3C4230FBB1A67A /* Pods-UsherKit_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
