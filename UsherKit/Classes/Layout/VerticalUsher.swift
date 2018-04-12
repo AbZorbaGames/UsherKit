@@ -28,7 +28,6 @@ public protocol VerticalUsher: Usher {
     var verticalSpacing: Float { get }
 }
 
-
 public extension VerticalUsher {
 
     func requiredSizeForPositioning<Size>(sizes: [Size]) -> Size where Size: UsherSize {
