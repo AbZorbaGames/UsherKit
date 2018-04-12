@@ -43,10 +43,11 @@ public extension LeftStackingHorizontalUsher {
                                 layoutSize: sizes[0])
             previous.layoutOrigin.layoutX = self.insets.left
             positions.append(previous)
-            for (index, _) in sizes.enumerated() {
+            for (index, size) in sizes.enumerated() {
                 guard index > 0 else { continue }
                 var rect = previous
                 rect.layoutOrigin.layoutX = previous.layoutOrigin.layoutX + previous.layoutWidth + self.horizontalSpacing
+                rect.layoutHeight = size.layoutHeight
                 positions.append(rect)
                 previous = rect
             }

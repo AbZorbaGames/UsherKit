@@ -24,33 +24,37 @@
 //
 import Foundation
 
-//public protocol RightStackingHorizontalUsher: HorizontalUsher {}
-//
-//public extension RightStackingHorizontalUsher {
-//
-//    func positioning(ofRectangulars rectangulars: [UsherRect],
-//                     inBounds bounds: UsherRect) throws -> [UsherRect] {
-//        let size = self.requiredSizeForPositioning(rectangulars: rectangulars)
-//
-//        print("asking to layout rects: \(rectangulars) in bounds: \(bounds) requiredSize: \(size)")
-//        guard bounds.width >= size.width,
-//            bounds.height >= size.height else { throw UsherError.cannotFit }
-//
-//        guard rectangulars.isEmpty == false else { throw UsherError.noInput }
-//
-//        var positions: [UsherRect] = []
-//        var previous = rectangulars[0]
-//        previous.origin.x = self.insets.left
-//        positions.append(previous)
-//        for (index, _) in rectangulars.enumerated() {
-//            guard index > 0 else { continue }
-//            var rect = previous
-//            rect.origin.x = previous.minX + previous.width + self.horizontalSpacing
-//            positions.append(rect)
-//            previous = rect
-//        }
-//        print("responses rects: \(positions)")
-//        return positions
-//    }
-//}
+public protocol RightStackingHorizontalUsher: HorizontalUsher {}
+
+public extension RightStackingHorizontalUsher {
+
+    func positioning<Rect, Size>(ofSizes sizes: [Size], inBounds bounds: Rect) throws -> [Rect]
+        where Rect: UsherRect, Size: UsherSize {
+            let size = self.requiredSizeForPositioning(sizes: sizes)
+            
+            print("asking to layout sizes: \(size) in bounds: \(bounds) requiredSize: \(size)")
+            guard bounds.layoutWidth >= size.layoutWidth,
+                bounds.layoutHeight >= size.layoutHeight else { throw UsherError.cannotFit }
+            
+            guard sizes.isEmpty == false else { throw UsherError.noInput }
+            
+            var positions: [Rect] = []
+            var previous = Rect(layoutOrigin: UPoint.zero,
+                                layoutSize: sizes.last!)
+            let x = (bounds.layoutWidth - self.insets.right) - previous.layoutWidth
+            previous.layoutOrigin.layoutX = x
+            positions.append(previous)
+            let butLast = sizes.reversed().suffix(from: 1)
+            for size in butLast {
+                var rect = previous
+                let x = previous.layoutOrigin.layoutX - self.horizontalSpacing - rect.layoutWidth
+                rect.layoutOrigin.layoutX = x
+                rect.layoutHeight = size.layoutHeight
+                positions.append(rect)
+                previous = rect
+            }
+            print("responses rects: \(positions)")
+            return positions
+    }
+}
 

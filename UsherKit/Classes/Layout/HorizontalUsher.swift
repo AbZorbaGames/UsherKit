@@ -33,15 +33,13 @@ public extension HorizontalUsher {
     func requiredSizeForPositioning<Size>(sizes: [Size]) -> Size where Size: UsherSize {
         guard sizes.isEmpty == false else { return Size(layoutWidth: 0, layoutHeight: 0) }
         
-        let first = sizes[0]
-        var (width, height) = (first.layoutWidth, first.layoutHeight)
-        sizes.forEach { (size: Size) in
-            if size.layoutHeight > height {
-                height = size.layoutHeight
-            }
-            width += (self.horizontalSpacing + size.layoutWidth)
-        }
-        width += (self.insets.left + self.insets.right)
-        return Size(layoutWidth: width, layoutHeight: height)
+        let maxHeight = sizes.max(by: { (s1: UsherSize, s2: UsherSize) -> Bool in
+            return s1.layoutHeight < s2.layoutHeight
+        })!.layoutHeight
+        let horizontalSpacing = self.horizontalSpacing
+        let totalWidth = sizes.reduce(Float(0), { (sum: Float, size: UsherSize) -> Float in
+            return sum + size.layoutWidth + horizontalSpacing
+        }) + (self.insets.left + self.insets.right) - horizontalSpacing
+        return Size(layoutWidth: totalWidth, layoutHeight: maxHeight)
     }
 }
