@@ -25,7 +25,7 @@
 import Foundation
 
 public protocol HorizontalUsher: Usher {
-    var horizontalSpacing: Float { get set }
+    var horizontalSpacing: Float { get }
 }
 
 public extension HorizontalUsher {

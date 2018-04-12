@@ -30,7 +30,7 @@ public protocol Usher {
     
     func requiredSizeForPositioning<Size>(sizes: [Size]) -> Size where Size: UsherSize
     
-    var insets: UsherInsets { get set }
+    var insets: UsherInsets { get }
 }
 
 public enum UsherError: Error {
