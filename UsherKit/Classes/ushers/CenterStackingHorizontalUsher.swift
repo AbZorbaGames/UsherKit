@@ -29,27 +29,27 @@ import Foundation
 public protocol CenterStackingHorizontalUsher: HorizontalUsher {}
 
 
-private enum Style {
+internal enum Style {
     case odd
     case even
     case unit
+    
+    init(_ things: [Any]) {
+        let items = things.count
+        if items == 1 {
+            self = Style.unit
+        }
+        else if items.quotientAndRemainder(dividingBy: 2).remainder != 0 {
+            self = Style.odd
+        }
+        else {
+            self = Style.even
+        }
+    }
 }
 
 public extension CenterStackingHorizontalUsher {
 
-    
-    private func style(things: [Any]) -> Style {
-        let items = things.count
-        if items == 1 {
-            return Style.unit
-        }
-        else if items.quotientAndRemainder(dividingBy: 2).remainder != 0 {
-            return Style.odd
-        }
-        else {
-            return Style.even
-        }
-    }
     
     func requiredSizeForPositioning<Size>(sizes: [Size]) -> Size where Size: UsherSize {
         guard sizes.isEmpty == false else { return Size(layoutWidth: 0, layoutHeight: 0) }
@@ -64,11 +64,11 @@ public extension CenterStackingHorizontalUsher {
             return s1.layoutHeight < s2.layoutHeight
         })!.layoutHeight
         let horizontalSpacing = self.horizontalSpacing
-        var totalWidth = sizes.reduce(Float(0), { (sum: Float, size: UsherSize) -> Float in
+        let totalWidth = sizes.reduce(Float(0), { (sum: Float, size: UsherSize) -> Float in
             return sum + size.layoutWidth + horizontalSpacing
         }) + (self.insets.left + self.insets.right) - horizontalSpacing
         
-        let type = style(things: sizes)
+        let type = Style(sizes)
         switch type {
         case .unit: break
         case .odd: break
@@ -96,7 +96,7 @@ public extension CenterStackingHorizontalUsher {
             var positions: [Rect] = []
             positions.reserveCapacity(rects.count)
             
-            switch style(things: rects) {
+            switch Style(rects) {
             case .unit:
                 let r = rects[0]
                 let x = centerX - (r.layoutWidth / 2)
@@ -225,7 +225,7 @@ public extension CenterStackingHorizontalUsher {
 }
 
 
-fileprivate extension RandomAccessCollection {
+internal extension RandomAccessCollection {
     
     var oddMiddleIndex: Self.Index? {
         guard self.count != 0 else { return nil }

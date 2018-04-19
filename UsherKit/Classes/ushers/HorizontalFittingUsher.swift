@@ -1,8 +1,8 @@
 //
-//  LeftStackingHorizontalUsher.swift
+//  HorizontalFittingUsher.swift
 //  UsherKit
 //
-//  Created by Georges Boumis on 22/03/2018.
+//  Created by Georges Boumis on 19/04/2018.
 //
 //  Licensed to the Apache Software Foundation (ASF) under one
 //  or more contributor license agreements.  See the NOTICE file
@@ -22,11 +22,12 @@
 //  under the License.
 //
 //
+
 import Foundation
 
-public protocol LeftStackingHorizontalUsher: HorizontalUsher {}
+public protocol HorizontalFittingUsher: HorizontalUsher {}
 
-public extension LeftStackingHorizontalUsher {
+public extension HorizontalFittingUsher {
     
     func positioning<Rect>(ofRects rects: [Rect], inBounds bounds: Rect) throws -> [Rect]
         where Rect: UsherRect {
@@ -39,29 +40,22 @@ public extension LeftStackingHorizontalUsher {
             })
             let requiredSize = self.requiredSizeForPositioning(sizes: sizes)
             print("asking to layout rects: \(rects) in bounds: \(bounds) requiredSize: \(requiredSize)")
-            
             guard bounds.layoutWidth >= requiredSize.layoutWidth,
                 bounds.layoutHeight >= requiredSize.layoutHeight else { throw UsherError.cannotFit }
             
+            guard rects.count > 1 else { return rects }
             
-            var positions: [Rect] = []
-            positions.reserveCapacity(rects.count)
-            
-            var previous = rects[0]
-            previous.layoutOrigin.layoutX = self.insets.left
-            positions.append(previous)
-            
-            let horizontalSpacing = self.horizontalSpacing
-            for rect in rects.suffix(from: 1) {
-                let x = previous.layoutOrigin.layoutX
-                    + previous.layoutWidth
-                    + horizontalSpacing
-                let origin = UPoint(layoutX: x, layoutY: rect.layoutOrigin.layoutY)
-                let result = Rect(layoutOrigin: origin, layoutSize: rect.layoutSize)
-                positions.append(result)
-                previous = result
-            }
-            print("responses rects: \(positions)")
-            return positions
+            let totalWidth = rects.reduce(Float(0), { (sum: Float, current: Rect) -> Float in
+                return sum + current.layoutSize.layoutWidth
+            }) + (self.insets.left + self.insets.right)
+            let horizontalSpacing = (bounds.layoutWidth - totalWidth) / Float(rects.count - 1)
+            let layout = Left(horizontalSpacing: horizontalSpacing, insets: self.insets)
+            return try layout.positioning(ofRects: rects, inBounds: bounds)
     }
 }
+
+private struct Left: LeftStackingHorizontalUsher {
+    var horizontalSpacing: Float = 0
+    var insets: UsherInsets = UsherInsets.zero
+}
+
