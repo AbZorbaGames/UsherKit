@@ -40,8 +40,6 @@ public extension TopStackingVerticalUsher {
             })
             
             let requiredSize = self.requiredSizeForPositioning(sizes: sizes)
-            print("asking to layout rects: \(rects) in bounds: \(bounds) requiredSize: \(requiredSize)")
-            
             guard bounds.layoutWidth >= requiredSize.layoutWidth,
                 bounds.layoutHeight >= requiredSize.layoutHeight else { throw UsherError.cannotFit }
             
@@ -61,7 +59,6 @@ public extension TopStackingVerticalUsher {
                 positions.append(rect)
                 previous = rect
             }
-            print("responses rects: \(positions)")
             return positions
     }
 }

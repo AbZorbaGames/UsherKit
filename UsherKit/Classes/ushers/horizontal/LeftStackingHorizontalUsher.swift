@@ -38,8 +38,6 @@ public extension LeftStackingHorizontalUsher {
                 return USize(layoutWidth: size.layoutWidth, layoutHeight: size.layoutHeight)
             })
             let requiredSize = self.requiredSizeForPositioning(sizes: sizes)
-            print("asking to layout rects: \(rects) in bounds: \(bounds) requiredSize: \(requiredSize)")
-            
             guard bounds.layoutWidth >= requiredSize.layoutWidth,
                 bounds.layoutHeight >= requiredSize.layoutHeight else { throw UsherError.cannotFit }
             
@@ -61,7 +59,6 @@ public extension LeftStackingHorizontalUsher {
                 positions.append(result)
                 previous = result
             }
-            print("responses rects: \(positions)")
             return positions
     }
 }
