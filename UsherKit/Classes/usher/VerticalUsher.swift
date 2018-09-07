@@ -43,11 +43,12 @@ public extension VerticalUsher {
             return s1.layoutWidth < s2.layoutWidth
         })!.layoutWidth
         
-        let verticalSpacing = self.verticalSpacing
+        let verticalSpacing = self.verticalSpacing.rounded(FloatingPointRoundingRule.down)
         let totalHeight = sizes.reduce(Float(0), { (sum: Float, size: UsherSize) -> Float in
             return sum + size.layoutHeight + verticalSpacing
         }) + (self.insets.top + self.insets.bottom) - verticalSpacing
-        return Size(layoutWidth: maxWidth, layoutHeight: totalHeight)
+        return Size(layoutWidth: maxWidth.rounded(FloatingPointRoundingRule.down),
+                    layoutHeight: totalHeight.rounded(FloatingPointRoundingRule.down))
     }
 }
 

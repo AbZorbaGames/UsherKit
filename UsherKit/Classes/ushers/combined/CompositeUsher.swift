@@ -61,7 +61,9 @@ public struct CompositeUsher: Usher {
         let maxHeight = requiredSizes.max(by: { (s1: UsherSize, s2: UsherSize) -> Bool in
             return (s1.layoutHeight < s2.layoutHeight)
         })!
-        return Size(layoutWidth: maxWidth.layoutWidth + (self.insets.left + self.insets.right),
-                    layoutHeight: maxHeight.layoutHeight + (self.insets.top + self.insets.bottom))
+        let width = maxWidth.layoutWidth + (self.insets.left + self.insets.right)
+        let height = maxHeight.layoutHeight + (self.insets.top + self.insets.bottom)
+        return Size(layoutWidth: width.rounded(FloatingPointRoundingRule.down),
+                    layoutHeight: height.rounded(FloatingPointRoundingRule.down))
     }
 }

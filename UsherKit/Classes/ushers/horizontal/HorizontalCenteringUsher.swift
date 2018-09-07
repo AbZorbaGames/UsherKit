@@ -37,7 +37,8 @@ public extension HorizontalCenteringUsher {
         let maxWidth = sizes.max(by: { (s1: UsherSize, s2: UsherSize) -> Bool in
             return s1.layoutWidth < s2.layoutWidth
         })!.layoutWidth
-        return Size(layoutWidth: maxWidth, layoutHeight: maxHeight)
+        return Size(layoutWidth: maxWidth.rounded(FloatingPointRoundingRule.down),
+                    layoutHeight: maxHeight.rounded(FloatingPointRoundingRule.down))
     }
     
     func positioning<Rect>(ofRects rects: [Rect], inBounds bounds: Rect) throws -> [Rect]

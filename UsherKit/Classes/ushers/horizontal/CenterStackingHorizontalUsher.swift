@@ -74,7 +74,8 @@ public extension CenterStackingHorizontalUsher {
         case .odd: break
         case .even: break
         }
-        return Size(layoutWidth: totalWidth, layoutHeight: maxHeight)
+        return Size(layoutWidth: totalWidth.rounded(FloatingPointRoundingRule.down),
+                    layoutHeight: maxHeight.rounded(FloatingPointRoundingRule.down))
     }
     
     func positioning<Rect>(ofRects rects: [Rect], inBounds bounds: Rect) throws -> [Rect]

@@ -46,6 +46,7 @@ public extension HorizontalUsher {
         let totalWidth = sizes.reduce(Float(0), { (sum: Float, size: UsherSize) -> Float in
             return sum + size.layoutWidth + horizontalSpacing
         }) + (self.insets.left + self.insets.right) - horizontalSpacing
-        return Size(layoutWidth: totalWidth, layoutHeight: maxHeight)
+        return Size(layoutWidth: totalWidth.rounded(FloatingPointRoundingRule.down),
+                    layoutHeight: maxHeight.rounded(FloatingPointRoundingRule.down))
     }
 }
