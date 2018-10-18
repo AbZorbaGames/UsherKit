@@ -173,4 +173,70 @@ class ConstantUsherTests: XCTestCase {
         }
         XCTAssertThrowsError(try layout.positioning(ofRects: inRects, inBounds: bounds))
     }
+
+    struct Left: LeftStackingHorizontalUsher {
+        var horizontalSpacing: Float
+        var insets: UsherInsets
+    }
+    struct Bottom: BottomStackingVerticalUsher {
+        var verticalSpacing: Float
+        var insets: UsherInsets
+    }
+
+    func testComposite() {
+        let spacing = Float(5)
+        let inset = Float(2)
+        let value = Float(15)
+        let insets = UsherInsets(top: inset, right: inset, bottom: inset, left: inset)
+
+        let sizes = [
+            CGSize(width: 50, height: 20),
+            CGSize(width: 55, height: 10),
+            CGSize(width: 40, height: 30),
+            CGSize(width: 25, height: 20),
+            ]
+        let bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 200, height: 200))
+
+        let dimension = CGFloat(value)
+        let expectedResults: [CGRect] = [
+            CGRect(x: dimension * 0,
+                   y: 0,
+                   width: dimension,
+                   height: dimension),
+            CGRect(x: dimension * 1,
+                   y: 0,
+                   width: dimension,
+                   height: dimension),
+            CGRect(x: dimension * 2,
+                   y: 0,
+                   width: dimension,
+                   height: dimension),
+            CGRect(x: dimension * 3,
+                   y: 0,
+                   width: dimension,
+                   height: dimension)
+        ]
+
+        let vertical = Vertical(verticalValue: value,
+                                verticalSpacing: spacing,
+                                insets: insets)
+        let horizontal = Horizontal(horizontalValue: value,
+                                    horizontalSpacing: spacing,
+                                    insets: insets)
+        let left = Left(horizontalSpacing: 0, insets: UsherInsets.zero)
+        let bottom = Bottom(verticalSpacing: 0, insets: UsherInsets.zero)
+        let layout = CompositeUsher(ushers: [vertical, horizontal, bottom],
+                                    insets: UsherInsets.zero)
+
+        let inRects = sizes.map { (size: CGSize) -> CGRect in
+            return CGRect(origin: CGPoint.zero, size: size)
+        }
+        do {
+            let outRects = try layout.positioning(ofRects: inRects, inBounds: bounds)
+            XCTAssert(outRects.count == inRects.count)
+            XCTAssert(outRects == expectedResults)
+        } catch {
+            XCTFail()
+        }
+    }
 }

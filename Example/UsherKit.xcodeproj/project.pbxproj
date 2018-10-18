@@ -16,6 +16,7 @@
 		F86A5320207F72A1001F6624 /* BottomStackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816622C207F66710013419C /* BottomStackingTests.swift */; };
 		F86A532A207F77BE001F6624 /* VerticalCenteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86A5329207F77BE001F6624 /* VerticalCenteringTests.swift */; };
 		F86A532C207F7864001F6624 /* LeftCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86A532B207F7864001F6624 /* LeftCenterTests.swift */; };
+		F883C6122178B47B001224DD /* ExtremitiesUsherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883C6112178B47B001224DD /* ExtremitiesUsherTests.swift */; };
 		F89CE54A2146772D00538A93 /* HorizontalFillingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89CE5492146772D00538A93 /* HorizontalFillingTests.swift */; };
 		F89CE54C2146775300538A93 /* CGAdaptation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89CE54B2146775300538A93 /* CGAdaptation.swift */; };
 		F8FFD5D9207F8CB1002DA3AC /* CenterStackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FFD5D8207F8CB1002DA3AC /* CenterStackingTests.swift */; };
@@ -38,6 +39,7 @@
 		F824EE3B2178A4270015BE16 /* ConstantUsherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantUsherTests.swift; sourceTree = "<group>"; };
 		F86A5329207F77BE001F6624 /* VerticalCenteringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCenteringTests.swift; sourceTree = "<group>"; };
 		F86A532B207F7864001F6624 /* LeftCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftCenterTests.swift; sourceTree = "<group>"; };
+		F883C6112178B47B001224DD /* ExtremitiesUsherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtremitiesUsherTests.swift; sourceTree = "<group>"; };
 		F89CE5492146772D00538A93 /* HorizontalFillingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalFillingTests.swift; sourceTree = "<group>"; };
 		F89CE54B2146775300538A93 /* CGAdaptation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAdaptation.swift; sourceTree = "<group>"; };
 		F8FFD5D8207F8CB1002DA3AC /* CenterStackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterStackingTests.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				F8FFD5D8207F8CB1002DA3AC /* CenterStackingTests.swift */,
 				F824EE33217880A00015BE16 /* VerticalFillingUsherTests.swift */,
 				F824EE3B2178A4270015BE16 /* ConstantUsherTests.swift */,
+				F883C6112178B47B001224DD /* ExtremitiesUsherTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -258,6 +261,7 @@
 				F86A531A207F6F7C001F6624 /* LeftStackingTests.swift in Sources */,
 				F89CE54A2146772D00538A93 /* HorizontalFillingTests.swift in Sources */,
 				F824EE34217880A00015BE16 /* VerticalFillingUsherTests.swift in Sources */,
+				F883C6122178B47B001224DD /* ExtremitiesUsherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
