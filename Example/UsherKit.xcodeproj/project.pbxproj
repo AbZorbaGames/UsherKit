@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B7FD0FB2E6C8BD2BE84DBA2D /* Pods_UsherKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B51A080AC5B03B7934FF3800 /* Pods_UsherKit_Tests.framework */; };
 		F824EE34217880A00015BE16 /* VerticalFillingUsherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824EE33217880A00015BE16 /* VerticalFillingUsherTests.swift */; };
+		F824EE3C2178A4270015BE16 /* ConstantUsherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824EE3B2178A4270015BE16 /* ConstantUsherTests.swift */; };
 		F86A531A207F6F7C001F6624 /* LeftStackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* LeftStackingTests.swift */; };
 		F86A531C207F715B001F6624 /* RightStackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8166228207F5AF00013419C /* RightStackingTests.swift */; };
 		F86A531E207F721A001F6624 /* TopStackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816622A207F647B0013419C /* TopStackingTests.swift */; };
@@ -34,6 +35,7 @@
 		F816622A207F647B0013419C /* TopStackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStackingTests.swift; sourceTree = "<group>"; };
 		F816622C207F66710013419C /* BottomStackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomStackingTests.swift; sourceTree = "<group>"; };
 		F824EE33217880A00015BE16 /* VerticalFillingUsherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalFillingUsherTests.swift; sourceTree = "<group>"; };
+		F824EE3B2178A4270015BE16 /* ConstantUsherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantUsherTests.swift; sourceTree = "<group>"; };
 		F86A5329207F77BE001F6624 /* VerticalCenteringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCenteringTests.swift; sourceTree = "<group>"; };
 		F86A532B207F7864001F6624 /* LeftCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftCenterTests.swift; sourceTree = "<group>"; };
 		F89CE5492146772D00538A93 /* HorizontalFillingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalFillingTests.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				F86A532B207F7864001F6624 /* LeftCenterTests.swift */,
 				F8FFD5D8207F8CB1002DA3AC /* CenterStackingTests.swift */,
 				F824EE33217880A00015BE16 /* VerticalFillingUsherTests.swift */,
+				F824EE3B2178A4270015BE16 /* ConstantUsherTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -249,6 +252,7 @@
 				F86A532A207F77BE001F6624 /* VerticalCenteringTests.swift in Sources */,
 				F86A5320207F72A1001F6624 /* BottomStackingTests.swift in Sources */,
 				F86A531E207F721A001F6624 /* TopStackingTests.swift in Sources */,
+				F824EE3C2178A4270015BE16 /* ConstantUsherTests.swift in Sources */,
 				F86A531C207F715B001F6624 /* RightStackingTests.swift in Sources */,
 				F89CE54C2146775300538A93 /* CGAdaptation.swift in Sources */,
 				F86A531A207F6F7C001F6624 /* LeftStackingTests.swift in Sources */,
