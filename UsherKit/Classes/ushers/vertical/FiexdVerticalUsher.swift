@@ -31,7 +31,7 @@ public protocol FixedVerticalUsher: VerticalUsher {
 
 public extension FixedVerticalUsher {
 
-    func requiredSizeForPositioning<Size>(sizes: [Size]) -> Size where Size: UsherSize {
+    private func requiredSizeForPositioning<Size>(sizes: [Size]) -> Size where Size: UsherSize {
         let height = self.fixedVerticalValue - (self.insets.top + self.insets.bottom)
         guard sizes.isEmpty == false else { return Size(layoutWidth: height,
                                                         layoutHeight: 0) }
@@ -49,7 +49,7 @@ public extension FixedVerticalUsher {
                     layoutHeight: height)
     }
 
-    public func positioning<Rect>(ofRects rects: [Rect], inBounds bounds: Rect) throws -> [Rect]
+    func positioning<Rect>(ofRects rects: [Rect], inBounds bounds: Rect) throws -> [Rect]
         where Rect: UsherRect {
 
             guard rects.isEmpty == false else { throw UsherError.noInput }

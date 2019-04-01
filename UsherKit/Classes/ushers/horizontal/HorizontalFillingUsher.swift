@@ -29,7 +29,7 @@ public protocol HorizontalFillingUsher: HorizontalUsher {}
 
 public extension HorizontalFillingUsher {
 
-    public func positioning<Rect>(ofRects rects: [Rect], inBounds bounds: Rect) throws -> [Rect]
+    func positioning<Rect>(ofRects rects: [Rect], inBounds bounds: Rect) throws -> [Rect]
         where Rect: UsherRect {
 
             guard rects.isEmpty == false else { throw UsherError.noInput }
